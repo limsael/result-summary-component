@@ -1,0 +1,154 @@
+.card {
+  display: grid;
+  gap: 1.5rem;
+
+  &__header {
+    background: linear-gradient($light-slate-blue, $light-royal-blue);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  &__result-title {
+    font-size: 0.9rem;
+    color: $light-lavender;
+    margin-bottom: 1rem;
+  }
+
+  &__circle {
+    background-image: linear-gradient($violet-blue, $persian-blue);
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-inline: auto;
+    padding: 1.2rem;
+  }
+
+  &__result-rate {
+    color: $white;
+    font-weight: 800;
+  }
+
+  &__result-of {
+    color: $white;
+  }
+
+  &__result-status {
+    color: $pale-blue;
+    // margin-block-end: 0.9rem;
+  }
+
+  &__result-description {
+    color: $light-lavender;
+    // margin-block-end: 0.9rem;
+  }
+
+  &__body {
+    padding: 1rem;
+  }
+
+  &__summary {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &:nth-of-type(1) {
+      background: $light-red-alpha;
+      color: $light-red;
+    }
+
+    &:nth-of-type(2) {
+      background: $orangey-yellow-alpha;
+      color: $orangey-yellow;
+    }
+
+    &:nth-of-type(3) {
+      background: $green-teal-alpha;
+      color: $green-teal;
+    }
+
+    &:nth-of-type(4) {
+      background: $cobalt-blue-alpha;
+      color: $cobalt-blue;
+    }
+
+    &-value {
+      color: $dark-gray-blue;
+
+      span {
+        font-weight: 800;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+    border-radius: 2rem;
+    background: $dark-gray-blue;
+    text-align: center;
+    color: $pale-blue;
+    font-weight: 700;
+    transition: background 0.4s ease-in-out;
+
+    &:hover {
+      background: linear-gradient($light-slate-blue, $light-royal-blue);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    background-color: $pale-blue;
+  }
+
+  .card {
+    max-width: 700px;
+    background-color: $white;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 1.5rem;
+
+    &__header {
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
+      padding-inline: 0.3rem;
+    }
+
+    &__circle {
+      height: 150px;
+      width: 150px;
+      border-radius: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-inline: auto;
+    }
+
+    &__summary {
+      gap: 1.2rem;
+    }
+  }
+}
